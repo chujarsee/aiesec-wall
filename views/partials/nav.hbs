@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src="/photos/logo.png" style="width: 150px; height: 50px; object-fit: contain" alt="AIESEC"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+      <ul class="navbar-nav collpase navbar-collapse me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="academics" href="/f/Academics/">Academics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/f/Love/">Love</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/f/Life/">Life</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/f/Inspirational-Messages/"> Inspiration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/f/AIESEC/">AIESEC</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="freedom-wall" href="/f/Freedom-wall/">Freedom Wall</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About and Guidelines</a>
+        </li>
+      </ul>
+      <form action="/f/contain/search" class="collapse navbar-collapse" method="get" class="d-flex" style="gap: 4px">
+        <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+
+        {{!-- If not LoggedIn, Show Login Button, else Show Logout Button --}}
+        {{#unless isLogged}} 
+          <a href="/user/login" class="btn btn-primary"><strong>Login</strong></a>
+          <a href="/user/signup" class="btn btn-info color-white"><strong>Signup</strong></a>
+        {{else}}
+          <a href="/user/settings" class="btn btn-primary"><strong>Settings</strong></a>
+          <a href="/user/logout" class="btn btn-primary"><strong>Logout</strong></a>
+        {{/unless}}
+      </form>
+    </div>
+  </div>
+</nav>
