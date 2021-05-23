@@ -1,0 +1,20 @@
+{{> nav}}
+
+<form class="w-50 p-5 card mx-auto my-5" action="/user/login" method="POST">
+  <h1 class="text-center my-2"><strong>Login</strong></h1>
+  {{#if isWrongCredentials}}
+    <div class="alert alert-danger w-100 my-2 mx-auto text-center" role="alert">
+      Either Wrong Username or Password
+    </div>
+  {{/if}}
+  <div class="my-3">
+    <label for="name" class="form-label">Username</label>
+    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+  </div>
+  <button type="submit" value="submit" class="btn btn-gradient mb-3"><strong>Submit</strong></button>
+  <a href="/user/signup" class="text-center"><small>New? Signup now!</small></a>
+</form>

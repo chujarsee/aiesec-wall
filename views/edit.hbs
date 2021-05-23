@@ -1,0 +1,29 @@
+
+<h5>Current</h5>
+
+{{#if post}}
+  <h6>{{post.title}}</h6>
+  <h6>{{post.content}}</h6>
+
+  <form action="/edit/post/{{post._id}}" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" name="title" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title" value="{{post.title}}">
+    </div>
+    <div class="form-group">
+      <label for="content">Body</label>
+      <input type="text" name="content" class="form-control" id="exampleInputPassword1" placeholder="Body" value="{{post.content}}">
+    </div>
+    <button type="submit" value="submit" class="btn btn-primary">Save changes</button>
+  </form>
+{{/if}}
+
+{{#if comment}}
+  <form action="/edit/comment/{{comment._id}}" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="content">Comment</label>
+      <input type="text" name="content" class="form-control" id="exampleInputPassword1" placeholder="Body" value="{{comment.content}}">
+    </div>
+    <button type="submit" value="submit" class="btn btn-primary">Save changes</button>
+  </form>
+{{/if}}
