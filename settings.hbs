@@ -1,0 +1,18 @@
+<div class="text-center card bg-light mx-auto my-4 w-75">
+
+  <div class="card-header"><h3><strong>Settings</strong></h3></div>
+  <div class="card-body">
+    <img src="data:{{user.profilePicture.contentType}};base64,{{user.profilePicture.data}}" style="height: 400px; width: 400px;" class="rounded-circle mx-auto" alt="profile picture" srcset="">
+
+    <br></br>
+    <form action="/user/profilePicture" method="post" enctype="multipart/form-data">
+      <label for="image">Change Profile Picture</label>
+      <input type="file" name="image" id="image" required>
+      <br></br>
+      <button type="submit">Change Profile Picture</button>
+    </form>
+</div>
+</div>
+
+
+{{> footer}}
