@@ -4,38 +4,14 @@
   <div class="card-body">
     <img src="data:{{user.profilePicture.contentType}};base64,{{user.profilePicture.data}}" style="height: 400px; width: 400px;" class="rounded-circle mx-auto" alt="profile picture" srcset="">
 
+    <br></br>
     <form action="/user/profilePicture" method="post" enctype="multipart/form-data">
       <label for="image">Change Profile Picture</label>
       <input type="file" name="image" id="image" required>
-      <button type="submit">Change Profile Picture</button>
+      <br></br>
     </form>
-    {{#if isNewPasswordNotSame}}
-      <div class="alert alert-danger" role="alert">
-        New Password and Confirmation Password is not the same!
-      </div>
-    {{/if}}
-    {{#if isOldPasswordWrong}}
-      <div class="alert alert-danger" role="alert">
-        <strong> Password is Wrong! </strong>
-      </div>
-    {{/if}}
-    <form action="/login/changePassword" class="text-left col-5 mx-auto" method="post" enctype="multipart/form-data">
-      <div class="">
-        <label for="image">Old Password</label>
-        <input type="password" class="form-control" name="oldPassword" id="oldPassword" required>
-      </div>
-      <div>
-        <label for="image">New Password</label>
-        <input type="password" class="form-control" name="newPassword" id="newPassword" required>
-      </div>
-      <div class="mb-2">
-        <label for="image">Confirm New Password</label>
-        <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>  
-
 </div>
+</div>
+
 
 {{> footer}}
