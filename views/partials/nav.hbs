@@ -39,7 +39,7 @@
         {{!-- If not LoggedIn, Show Login Button, else Show Logout Button --}}
         {{#unless isLogged}} 
           <a href="/user/login" class="btn btn-light btn-gradient"><strong>Login</strong></a>
-          <a href="/user/signup" class="btn btn-info color-white"><strong>Signup</strong></a>
+          <a href="/user/signup"  class="btn btn-light btn-gradient"><strong>Signup</strong></a>
         {{else}}
           <a href="/user/settings" class="btn btn-primary"><strong>Settings</strong></a>
           <a href="/user/logout" class="btn btn-primary"><strong>Logout</strong></a>
